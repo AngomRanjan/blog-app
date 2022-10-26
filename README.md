@@ -1,8 +1,8 @@
 [![](https://img.shields.io/badge/Micronaut-Angom%20Chittaranjan-blue)](https://github.com/AngomRanjan)
 
-# Blog App
+# RoR
 
-First Ruby On Rails Project
+Ruby On Rails Intro Exercise
 
 
 ## Built With
