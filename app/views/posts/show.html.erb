@@ -1,0 +1,23 @@
+<section class="container">    
+    <div class="post-info">
+        <div class="post-title-box">
+            <p class="post-title">Post : <%= @post.title %> by <%= @post.author.name %></p>
+            <p class="post-text-1">Comments: <span><%= @post.comments_counter || 0 %>, Likes: <%= @post.likes_counter || 0 %></span></p>
+        </div>
+        <p><%= @post.text %></p>
+    </div>
+    <div class="comment-info">
+        <% @post.recent_comments.each do |comment| %>
+            <div>
+                <p> 
+                    <span>
+                        <%= comment.author.name %>:
+                    </span> 
+                    <span>
+                        <%= comment.text %>
+                    </span>
+                </p>
+            </div>            
+        <% end %>
+    </div>   
+</section>
