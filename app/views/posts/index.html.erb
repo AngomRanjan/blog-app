@@ -1,24 +1,39 @@
-<section class="container">  
+<section class="container grid">  
 
-    <div class="user-box">
-        <img class="image-user" src=<%= @user.photo %> alt="user"/>
-        <div class="user-info">
-            <p class="user-name"><%= @user.name %></p>
-            <p class="user-post">Number of posts: <%= @user.posts_counter%></p> 
+    <article class="cards">
+        <img class="cards__img" src=<%= @user.photo %> alt="user"/>
+        <div class="cards__info grid">
+            <h2 class="cards__title"><%= @user.name %></h2>
+            <h4 class="cards__item__ra">Number of posts: <%= @user.posts_counter%></h4>
         </div>   
-    </div>   
+    </article>   
 
     <% @posts.each do |post| %>
-        <div class="post-info">
-            <p class="post-title">Post : <%= post.title %> by <%= post.author.name %></p>
-            <p><%= post.text %></p>
-            <p class="post-text-2">Comments: <span><%= post.comments_counter || 0 %>, Likes: <%= post.likes_counter || 0 %></span></p>
-
-        </div>     
+        <article class="cards cards--posts">
+            <div class="cards__info">
+                <h2 class="cards__title">Post : <%= post.title %> by <%= post.author.name %></h2>
+                <p><%= post.text.first(50) %></p>
+                <h4 class="cards__item__ra">Comments: <span><%= post.comments_counter || 0 %>, Likes: <%= post.likes_counter || 0 %></span></h4>
+            </div>
+            <% unless post.comments_counter.nil? %>
+            <div class="comments__info">                
+                <% post.recent_comments.each do |comment| %>
+                    <p> 
+                        <span>
+                            <%= comment.author.name %>:
+                        </span> 
+                        <span>
+                            <%= comment.text %>
+                        </span>
+                    </p>            
+                <% end %>                
+            </div>
+            <% end %>
+        </article>    
 
     <% end %>   
 
-    <div class="button-user">
+    <div class="btn__holder">
         <button class="button">
             Pagination
         </button>

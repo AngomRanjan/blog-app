@@ -1,23 +1,25 @@
-<section class="container">    
-    <div class="post-info">
-        <div class="post-title-box">
-            <p class="post-title">Post : <%= @post.title %> by <%= @post.author.name %></p>
-            <p class="post-text-1">Comments: <span><%= @post.comments_counter || 0 %>, Likes: <%= @post.likes_counter || 0 %></span></p>
+<section class="container grid">    
+    <article class="cards cards--posts">
+        <div class="cards__info cards__info--pp">
+            <h2 class="cards__title">Post : <%= @post.title %> by <%= @post.author.name %></h2>
+            <p><%= @post.text %></p>            
+            <h4 class="cards__item__ra">Comments: <span><%= @post.comments_counter || 0 %>, Likes: <%= @post.likes_counter || 0 %></span></h4>
         </div>
-        <p><%= @post.text %></p>
-    </div>
-    <div class="comment-info">
-        <% @post.recent_comments.each do |comment| %>
-            <div>
-                <p> 
-                    <span>
-                        <%= comment.author.name %>:
-                    </span> 
-                    <span>
-                        <%= comment.text %>
-                    </span>
-                </p>
-            </div>            
+        <% unless @post.comments_counter.nil? %>
+        <div class="comment-info">
+            <% @post.recent_comments.each do |comment| %>
+                <div>
+                    <p>
+                        <span>
+                            <%= comment.author.name %>:
+                        </span>
+                        <span>
+                            <%= comment.text %>
+                        </span>
+                    </p>
+                </div>
+            <% end %>
+        </div>
         <% end %>
-    </div>   
+    </article>   
 </section>
