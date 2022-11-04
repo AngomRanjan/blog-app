@@ -57,7 +57,7 @@ a { text-decoration: none; }
 
 .cards {
   width: 100%;
-  grid-template-columns: 100px 1fr;
+  grid-template-columns: 150px 1fr;
 }
 
 .cards--posts {
@@ -70,7 +70,7 @@ a { text-decoration: none; }
   padding: 1rem;
 }
 
-.cards:not(.cards--posts) > * { height: 100px; }
+.cards:not(.cards--posts) > * { height: 150px; }
 
 .cards__info--pp {
   grid-template-columns: repeat(2, 1fr);

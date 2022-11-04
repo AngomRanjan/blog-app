@@ -10,11 +10,13 @@
 
     <% @posts.each do |post| %>
         <article class="cards cards--posts">
+            <%= link_to user_post_path(@user.id, post.id) do %>
             <div class="cards__info">
-                <h2 class="cards__title">Post : <%= post.title %> by <%= post.author.name %></h2>
-                <p><%= post.text.first(50) %></p>
+                <h2 class="cards__title">Post : <%= post.title %></h2>
+                <p><%= post.text.first(250) %>...</p>
                 <h4 class="cards__item__ra">Comments: <span><%= post.comments_counter || 0 %>, Likes: <%= post.likes_counter || 0 %></span></h4>
             </div>
+            <% end %>
             <% unless post.comments_counter.nil? %>
             <div class="comments__info">                
                 <% post.recent_comments.each do |comment| %>
