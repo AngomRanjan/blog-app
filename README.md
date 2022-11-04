@@ -1,8 +1,8 @@
 [![](https://img.shields.io/badge/Micronaut-Angom%20Chittaranjan-blue)](https://github.com/AngomRanjan)
 
-# RoR
+# Blog App
 
-Ruby On Rails Intro Exercise
+The Blog app will be a fully functional website that will show the list of posts and empower readers to interact with them by adding comments and liking posts.
 
 
 ## Built With
@@ -39,13 +39,13 @@ To get a local copy up and running follow these simple example steps.
 
 - To Start the programs
 
-  - cd cot
+  - cd blog-app
   - run the command $irb (interactive ruby shell)
   - run the program functions
 
 - To Test
 
-  - cd cot
+  - cd blog-app
   - rspec spec
 
 ## Authors
