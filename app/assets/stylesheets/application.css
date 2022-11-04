@@ -13,3 +13,82 @@
  *= require_tree .
  *= require_self
  */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  color: #111;
+}
+
+html {
+  font-family: "Roboto", serif;
+}
+
+body {
+  background: white;
+  color: #111;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1rem;
+  font-weight: normal;
+  line-height: 1.1rem;
+  padding: 1em 0;
+}
+
+img {
+  max-width: 100%;
+}
+
+a { text-decoration: none; }
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+:is(.grid, .cards, .cards__info) {
+  display: grid;
+  gap: 1rem;
+  align-items: center;
+}
+
+.cards {
+  width: 100%;
+  grid-template-columns: 100px 1fr;
+}
+
+.cards--posts {
+  grid-template-columns: 1fr;
+  gap: 0.1rem;
+}
+
+:is(.cards > *, .container > :not(.cards, .btn__holder)) {
+  border: 2px solid #454545;
+  padding: 1rem;
+}
+
+.cards:not(.cards--posts) > * { height: 100px; }
+
+.cards__info--pp {
+  grid-template-columns: repeat(2, 1fr);
+  grid-auto-flow: dense;
+}
+
+.cards__info--pp > :nth-child(2) {
+  grid-column: 1/3;
+}
+
+.cards__item__ra {
+  justify-self: right;
+}
+
+.btn__holder { justify-self: center; }
+
+button {
+  padding: 0.5em 1em;
+  border-radius: 0.5em;
+  border: 1px solid #111;
+}
