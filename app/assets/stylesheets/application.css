@@ -65,11 +65,6 @@ a { text-decoration: none; }
   gap: 0.1rem;
 }
 
-:is(.cards > :not(.button_to), .container > :not(.cards, .btn__holder)) {
-  border: 2px solid #454545;
-  padding: 1rem;
-}
-
 .cards:not(.cards--posts) > * { height: 150px; }
 
 .cards__info--pp {
@@ -91,8 +86,15 @@ a { text-decoration: none; }
   gap: 0.75em;
 }
 
+:is(.cards > :not(.button_to), .container > :not(.cards, .btn__holder)) {
+  border: 2px solid #454545;
+  padding: 1rem;
+}
+
 .button {
   padding: 0.5em 1em;
   border-radius: 0.5em;
   border: 1px solid #111;
 }
+
+button:hover { cursor: pointer; }

@@ -22,5 +22,6 @@
         </div>
         <% end %>
             <%= button_to "Add Comment", new_user_post_comment_path(@post.author, @post), method: :get, class: "button" %>
+            <%= button_to "Add Like", new_user_post_like_path(@post.author, @post), method: :get, class: "button" %>           
     </article>   
 </section>
