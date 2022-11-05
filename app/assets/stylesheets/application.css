@@ -85,7 +85,11 @@ a { text-decoration: none; }
   justify-self: right;
 }
 
-.btn__holder { justify-self: center; }
+.btn__holder {
+  justify-self: center;
+  display: flex;
+  gap: 0.75em;
+}
 
 button {
   padding: 0.5em 1em;
