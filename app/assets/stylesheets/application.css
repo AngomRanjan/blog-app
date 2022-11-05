@@ -65,7 +65,7 @@ a { text-decoration: none; }
   gap: 0.1rem;
 }
 
-:is(.cards > *, .container > :not(.cards, .btn__holder)) {
+:is(.cards > :not(.button_to), .container > :not(.cards, .btn__holder)) {
   border: 2px solid #454545;
   padding: 1rem;
 }
@@ -85,13 +85,13 @@ a { text-decoration: none; }
   justify-self: right;
 }
 
-.btn__holder {
+:is(.btn__holder, .button_to) {
   justify-self: center;
   display: flex;
   gap: 0.75em;
 }
 
-button {
+.button {
   padding: 0.5em 1em;
   border-radius: 0.5em;
   border: 1px solid #111;

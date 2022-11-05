@@ -1,6 +1,6 @@
 class PostsController < ApplicationController
   before_action :set_post, only: %i[show edit update destroy]
-  
+
   def index
     @user = current_user
     @posts = @user.posts
