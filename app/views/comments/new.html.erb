@@ -1,0 +1,12 @@
+<section class="container grid">
+    <p class="post-title">Add New Comment :</p>
+    <%= form_with model: @comment, url: user_post_comments_path, method: :post, local: true, class: "form-control grid" do |form| %>
+    
+        <%= form.label :text %>
+        <%= form.text_area :text, placeholder: "Type your comment here!", rows: 20, required: true,  class: "form-post-text" %>        
+    
+    <div class = "btn__holder">
+        <%= form.submit "Save", class: "button" %>
+    </div>
+    <% end %>
+</section>
