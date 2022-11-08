@@ -1,0 +1,9 @@
+<div class="comments__info">                
+    <% post.recent_comments.each do |comment| %>
+        <p> 
+            <span>
+                <%= comment.author.name %>: <%= comment.text %>
+            </span>
+        </p>            
+    <% end %>                
+</div>
