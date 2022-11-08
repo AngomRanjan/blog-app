@@ -1,27 +1,10 @@
 <section class="container grid">    
     <article class="cards cards--posts">
-        <div class="cards__info cards__info--pp">
-            <h2 class="cards__title">Post : <%= @post.title %> by <%= @post.author.name %></h2>
-            <p><%= @post.text %></p>            
-            <h4 class="cards__item__ra">Comments: <span><%= @post.comments_counter || 0 %>, Likes: <%= @post.likes_counter || 0 %></span></h4>
-        </div>
-        <% unless @post.comments_counter.nil? %>
-        <div class="comment-info">
-            <% @post.recent_comments.each do |comment| %>
-                <div>
-                    <p>
-                        <span>
-                            <%= comment.author.name %>:
-                        </span>
-                        <span>
-                            <%= comment.text %>
-                        </span>
-                    </p>
-                </div>
-            <% end %>
-        </div>
-        <% end %>
+        <%= render 'shared/post_content', post:@post, post_content:@post.text, writer:"by ".concat(@post.author.name) %>        
+        <%= render('shared/post_comments', post:@post) if @post.comments_counter.positive? %> 
+        <div class="button_to btn__holder">
             <%= button_to "Add Comment", new_user_post_comment_path(@post.author, @post), method: :get, class: "button" %>
-            <%= button_to "Add Like", new_user_post_like_path(@post.author, @post), method: :get, class: "button" %>           
+            <%= render :partial => 'shared/new_like' %>
+        </div>  
     </article>   
 </section>

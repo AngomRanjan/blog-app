@@ -2,8 +2,8 @@ class PostsController < ApplicationController
   before_action :set_post, only: %i[show edit update destroy]
 
   def index
-    @user = current_user
-    @posts = @user.posts
+    @user = User.find(params[:user_id])
+    @posts = @user.posts.includes(:comments)
   end
 
   def show
@@ -21,7 +21,7 @@ class PostsController < ApplicationController
 
     respond_to do |format|
       if @post.save
-        format.html { redirect_to user_post_url(current_user, @post), notice: 'Post was successfully created.' }
+        format.html { redirect_to user_post_url(@post.author_id, @post), notice: 'Post was successfully created.' }
       else
         format.html { render :new, status: :unprocessable_entity }
       end
