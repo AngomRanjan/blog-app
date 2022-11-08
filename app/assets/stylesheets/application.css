@@ -97,4 +97,4 @@ a { text-decoration: none; }
   border: 1px solid #111;
 }
 
-button:hover { cursor: pointer; }
+.button:hover { cursor: pointer; }
