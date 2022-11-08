@@ -43,5 +43,4 @@ RSpec.describe 'Test Show user Page', type: :feature do
       expect(page).to have_link('See all posts')
     end
   end
-  
 end
