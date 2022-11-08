@@ -27,9 +27,9 @@ RSpec.describe 'Test Index Page', type: :feature do
 
     it 'shows the number of posts of each user' do
       visit root_path
-      expect(page).to have_content('4')
-      expect(page).to have_content('5')
-      expect(page).to have_content('2')
+      expect(page).to have_content('Number of posts: 4')
+      expect(page).to have_content('Number of posts: 5')
+      expect(page).to have_content('Number of posts: 2')
     end
   end
 end
