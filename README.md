@@ -56,6 +56,13 @@ To get a local copy up and running follow these simple example steps.
 - Twitter: [@RanjanAngom](https://twitter.com/RanjanAngom)
 - LinkedIn: [angom-chittaranjan](https://linkedin.com/in/angom-chittaranjan)
 
+
+👤 **Hamayoun Ali**
+
+- GitHub: [@Hamayounali](https://github.com/Hamayounali)
+- Twitter: [@hamayounAli6](https://twitter.com/hamayounAli6)
+- LinkedIn: [Humayoon Ali](https://www.linkedin.com/in/humayoon-ali-663ba2239)
+
 ## Source
 
 - [Repo Link](https://github.com/AngomRanjan/ror)
