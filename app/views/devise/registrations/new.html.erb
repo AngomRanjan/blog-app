@@ -1,0 +1,37 @@
+<section class="grid">
+  <h2 class="btn__holder"></h2>
+
+  <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+    <%= render "devise/shared/error_messages", resource: resource %>
+
+    <div class="field btn__holder">
+      <%= f.text_field :name, autofocus: true, autocomplete: "text", placeholder: "Name" %>
+    </div>
+    <div class="field btn__holder">
+      <%= f.text_field :bio, autofocus: true, autocomplete: "text", placeholder: "Bio"%>
+    </div>
+    <div class="field btn__holder">
+      <%= f.text_field :photo, autofocus: true, autocomplete: "text", placeholder: "Photo" %>
+    </div>
+
+    <div class="field btn__holder">
+      <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "Email"%>
+    </div>
+
+    <div class="field btn__holder">
+      <%= f.password_field :password, autocomplete: "new-password", placeholder: "Password" %>
+    </div>
+
+    <div class="field btn__holder">
+      <%= f.password_field :password_confirmation, autocomplete: "new-password", placeholder: "Confirm Password"%>
+    </div>
+
+    <div class="actions btn__holder field">
+      <%= f.submit "Sign up"%>
+    </div>
+    <div class="btn__holder mid">
+      <%= render "devise/shared/links" %>
+    </div>
+  <% end %>
+
+</section>

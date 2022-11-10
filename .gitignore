@@ -32,3 +32,6 @@
 
 # .gitignore
 node_modules/
+
+# My Project Steps guide info
+guidesAndInstruction/

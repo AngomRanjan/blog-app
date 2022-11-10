@@ -1,0 +1,28 @@
+<section class="grid">
+  <h2 class="btn__holder"></h2>
+  <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+    <div class="field btn__holder">      
+      <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "Email", class: "ang" %>
+    </div>
+
+    <div class="field btn__holder">     
+      <%= f.password_field :password, autocomplete: "current-password", placeholder: "Password", class: "ang" %>
+    </div>
+
+    <% if devise_mapping.rememberable? %>
+      <div class="btn__holder mid">
+        <%= f.check_box :remember_me, class: "ang" %>
+        <%= f.label :remember_me, class: "ang" %>
+      </div>
+    <% end %>
+
+    <div class="btn__holder field">
+      <%= f.submit "Log in", class: "ang" %>
+    </div>
+    <div class="btn__holder mid">
+      <%= render "devise/shared/links" %>
+    </div>
+    
+  <% end %>
+
+</section>

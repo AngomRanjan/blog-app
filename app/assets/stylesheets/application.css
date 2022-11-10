@@ -49,7 +49,7 @@ a { text-decoration: none; }
   margin: 0 auto;
 }
 
-:is(.grid, .cards, .cards__info) {
+:is(.grid, .cards, .cards__info, .new_user) {
   display: grid;
   gap: 1rem;
   align-items: center;
@@ -58,6 +58,14 @@ a { text-decoration: none; }
 .cards {
   width: 100%;
   grid-template-columns: 150px 1fr;
+}
+
+.new_user > * {
+  width: 75%;
+}
+
+.field > * {
+  width: 90%;
 }
 
 .cards--posts {
@@ -98,3 +106,7 @@ a { text-decoration: none; }
 }
 
 .button:hover { cursor: pointer; }
+
+.mid {
+  justify-content: center;
+}
