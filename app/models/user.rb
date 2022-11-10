@@ -16,6 +16,10 @@ class User < ApplicationRecord
     posts.last(3)
   end
 
+  def admin?
+    role == 'admin'
+  end
+
   private
 
   def set_defaults
