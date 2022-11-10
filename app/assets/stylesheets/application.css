@@ -60,6 +60,14 @@ a { text-decoration: none; }
   grid-template-columns: 150px 1fr;
 }
 
+.new_user > * {
+  width: 75%;
+}
+
+.field > * {
+  width: 90%;
+}
+
 .cards--posts {
   grid-template-columns: 1fr;
   gap: 0.1rem;
@@ -98,3 +106,7 @@ a { text-decoration: none; }
 }
 
 .button:hover { cursor: pointer; }
+
+.mid {
+  justify-content: center;
+}
