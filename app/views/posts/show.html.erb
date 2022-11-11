@@ -3,11 +3,12 @@
         <%= render 'shared/post_content', post:@post, post_content:@post.text, writer:"by ".concat(@post.author.name) %>        
         <%= render('shared/post_comments', post:@post) if @post.comments_counter.positive? %> 
         <div class="button_to btn__holder">
+            <%= button_to "Back", user_path(@post.author, @post), method: :get, class: "button" %>
             <%= button_to "Add Comment", new_user_post_comment_path(@post.author, @post), method: :get, class: "button" %>
             <%= render :partial => 'shared/new_like' %>
             <% if can? :destroy, @post %>
-            <%= button_to "Delete Post", user_post_path(@post.author, @post), method: :delete, class: "button" %>
-        <% end %>
+                <%= button_to "Delete Post", user_post_path(@post.author, @post), method: :delete, class: "button" %>
+            <% end %>
         </div>  
     </article>   
 </section>

@@ -110,3 +110,8 @@ a { text-decoration: none; }
 .mid {
   justify-content: center;
 }
+
+.com {
+  display: flex;
+  gap: 0.3em;
+}
