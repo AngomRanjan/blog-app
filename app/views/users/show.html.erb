@@ -9,6 +9,7 @@
     <% end %> 
     
     <div class="btn__holder">
+        <%= button_to "Back", root_url(), method: :get, class: "button" %>
         <button class="button">
         <%= link_to "See all posts", user_posts_path(@user), class:"text-button" %>
         </button>

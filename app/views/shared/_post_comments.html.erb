@@ -1,9 +1,10 @@
 <div class="comments__info">                
     <% post.recent_comments.each do |comment| %>
-        <p> 
-            <span>
-                <%= comment.author.name %>: <%= comment.text %>
-            </span>
-        </p>            
-    <% end %>                
+        <div class="com">
+            <%= comment.author.name %>: <%= comment.text %>
+            <% if can? :destroy, comment %>
+                <%= button_to "Delete", user_post_comment_path(comment.author, comment.post,comment), method: :delete %>
+            <% end %>  
+        </div>            
+    <% end %>
 </div>
