@@ -7,7 +7,7 @@ class CommentsController < ApplicationController
       format.json { render json: @comments }
     end
   end
-  
+
   def new
     @comment = Comment.new
     @user = current_user
