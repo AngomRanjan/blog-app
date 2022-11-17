@@ -1,4 +1,13 @@
 class CommentsController < ApplicationController
+  def index
+    @user = current_user
+    @comments = @user.comments
+
+    respond_to do |format|
+      format.json { render json: @comments }
+    end
+  end
+
   def new
     @comment = Comment.new
     @user = current_user

@@ -47,6 +47,8 @@ gem 'devise'
 # Used cancancan for authorization
 gem 'cancancan'
 
+gem 'jwt'
+
 # Use Sass to process CSS
 # gem "sassc-rails"
 

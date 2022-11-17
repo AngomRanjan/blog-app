@@ -40,8 +40,8 @@ To get a local copy up and running follow these simple example steps.
 - To Start the programs
 
   - cd blog-app
-  - run the command $irb (interactive ruby shell)
-  - run the program functions
+  - run the command rails server (interactive ruby shell)
+  - open browser and type http://localhost:3000
 
 - To Test
 
