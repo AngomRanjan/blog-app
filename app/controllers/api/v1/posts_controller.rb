@@ -1,5 +1,5 @@
 class Api::V1::PostsController < ApplicationController
-  before_action :authorize_request
+  #before_action :authorize_request
   def index
     @posts = Post.where(author_id: params[:author_id])
     if @posts.empty?
